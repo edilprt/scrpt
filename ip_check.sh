@@ -1,5 +1,5 @@
 #!/bin/bash
-ip=$(wget -qO- ipinfo.io/ip);
+ip=$(wget -qO- ipinfo.io/ip)
   while :; do
   sleep 60
   cip=$(wget -qO- ipinfo.io/ip)
