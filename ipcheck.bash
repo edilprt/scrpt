@@ -11,7 +11,7 @@ ip=$(wget -qO- ipinfo.io/ip);
      if [  $ip != $cip  ]; then 
      echo  ["$d: IP изменился. Перезагрузка";
      shutdown -r;
-     else;
+     else
      echo ["$d: IP не изменился. Проверка повторится через 60 сек...]";
      fi
   done
