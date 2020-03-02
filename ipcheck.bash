@@ -4,8 +4,9 @@
 
 #!/bin/bash
 ip=$(wget -qO- ipinfo.io/ip);
+echo "Текущий IP $ip";
   while :; do
-  sleep 60
+ # sleep 60
   cip=$(wget -qO- ipinfo.io/ip);
   d=$(date +%T);
      if [  $ip != $cip  ]; then 
@@ -13,5 +14,6 @@ ip=$(wget -qO- ipinfo.io/ip);
      shutdown -r;
      else
      echo ["$d: IP не изменился. Проверка повторится через 60 сек...]";
+     sleep 60;
      fi
   done
