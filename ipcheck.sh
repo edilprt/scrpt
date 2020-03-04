@@ -12,9 +12,12 @@ message info "$ct - IP check успешно загружен. Текущий IP:
   cip=$(wget -qO- ipinfo.io/ip);
   d=$(date +%T);
      if [  $ip != $cip  ]; then 
-     echo  "$d: IP изменился. Перезагрузка";
-     message info "$d IP изменился. Перезагружаю риг."
-     reboot;
+     #echo  "$d: IP изменился. Перезагрузка";
+     echo  "$d: IP изменился. Перезагружаю майнер";
+     #message info "$d IP изменился. Перезагружаю риг."
+     message info "$d IP изменился. Перезагружаю майнер."
+     #reboot;
+     miner restart;
      else
      echo "$d: IP не изменился. Проверка повторится через 60 сек...";
      sleep 60;
