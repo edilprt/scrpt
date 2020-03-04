@@ -16,6 +16,7 @@ message info "$ct - IP check успешно загружен. Текущий IP:
      echo  "$d: IP изменился. Перезагружаю майнер";
      #message info "$d IP изменился. Перезагружаю риг."
      message info "$d IP изменился. Перезагружаю майнер."
+     ip=cip;
      #reboot;
      miner restart;
      else
