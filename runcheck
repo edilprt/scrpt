@@ -14,6 +14,6 @@ then {
 else 
 {
 	message info "ipcheck уже запущен"
-#	exit 1
+	exit 0
 }
 fi;
