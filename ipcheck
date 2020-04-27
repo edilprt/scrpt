@@ -1,0 +1,19 @@
+#                             Online Bash Shell.
+#                 Code, Compile, Run and Debug Bash script online.
+# Write your code in this editor and press "Run" button to execute it.
+
+#!/bin/bash
+ret=$(ps aux | grep [i]pcheck | wc -l)
+	if [ "$ret" -eq 0 ]
+then {
+	message info "Запсукаю ipcheck" #output text
+        sleep 1  #delay
+	exec usr/sbin/ipcheck #command for run program
+	exit 1
+}
+else 
+{
+	message info "ipcheck уже запущен"
+#	exit 1
+}
+fi;
