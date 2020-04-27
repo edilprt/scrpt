@@ -6,7 +6,7 @@
 ret=$(ps aux | grep [i]pcheck | wc -l)
 	if [ "$ret" -eq 0 ]
 then {
-	message info "Запсукаю ipcheck" #output text
+	message info "Запуcкаю ipcheck" #output text
         sleep 1  #delay
 	exec usr/sbin/ipcheck #command for run program
 	exit 1
